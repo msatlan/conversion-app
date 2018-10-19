@@ -39,5 +39,4 @@ class ExchangeRatesAPI {
         })
         dataTask?.resume()
     }
-    
 }

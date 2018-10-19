@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2834012179ED0400E3B5C4 /* CurrencyRate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2833FF2179ED0400E3B5C4 /* CurrencyRate+CoreDataClass.swift */; };
+		2E2834022179ED0400E3B5C4 /* CurrencyRate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2834002179ED0400E3B5C4 /* CurrencyRate+CoreDataProperties.swift */; };
+		2E2834042179ED5100E3B5C4 /* ConversionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2834032179ED5100E3B5C4 /* ConversionCalculator.swift */; };
 		2E537D032179B49600F3AE5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D022179B49600F3AE5B /* AppDelegate.swift */; };
 		2E537D052179B49600F3AE5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D042179B49600F3AE5B /* ViewController.swift */; };
 		2E537D082179B49600F3AE5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E537D062179B49600F3AE5B /* Main.storyboard */; };
@@ -15,6 +18,8 @@
 		2E537D182179B49B00F3AE5B /* ConversionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D172179B49B00F3AE5B /* ConversionAppTests.swift */; };
 		2E537D232179D5CE00F3AE5B /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */; };
 		2E537D252179D62700F3AE5B /* ExchangeRatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */; };
+		2E537D412179E3D000F3AE5B /* ConversionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D3F2179E3D000F3AE5B /* ConversionDataModel.xcdatamodeld */; };
+		2E537D472179E56300F3AE5B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D462179E56300F3AE5B /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2833FF2179ED0400E3B5C4 /* CurrencyRate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrencyRate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2E2834002179ED0400E3B5C4 /* CurrencyRate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrencyRate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E2834032179ED5100E3B5C4 /* ConversionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalculator.swift; sourceTree = "<group>"; };
 		2E537CFF2179B49600F3AE5B /* ConversionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E537D022179B49600F3AE5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E537D042179B49600F3AE5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +48,8 @@
 		2E537D192179B49B00F3AE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesAPI.swift; sourceTree = "<group>"; };
+		2E537D402179E3D000F3AE5B /* ConversionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConversionDataModel.xcdatamodel; sourceTree = "<group>"; };
+		2E537D462179E56300F3AE5B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +91,17 @@
 		2E537D012179B49600F3AE5B /* ConversionApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E537D262179D86000F3AE5B /* CoreData */,
 				2E537D022179B49600F3AE5B /* AppDelegate.swift */,
 				2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */,
 				2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */,
+				2E2834032179ED5100E3B5C4 /* ConversionCalculator.swift */,
 				2E537D042179B49600F3AE5B /* ViewController.swift */,
 				2E537D062179B49600F3AE5B /* Main.storyboard */,
 				2E537D092179B49B00F3AE5B /* Assets.xcassets */,
 				2E537D0B2179B49B00F3AE5B /* LaunchScreen.storyboard */,
 				2E537D0E2179B49B00F3AE5B /* Info.plist */,
+				2E537D3F2179E3D000F3AE5B /* ConversionDataModel.xcdatamodeld */,
 			);
 			path = ConversionApp;
 			sourceTree = "<group>";
@@ -100,6 +113,16 @@
 				2E537D192179B49B00F3AE5B /* Info.plist */,
 			);
 			path = ConversionAppTests;
+			sourceTree = "<group>";
+		};
+		2E537D262179D86000F3AE5B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2E2833FF2179ED0400E3B5C4 /* CurrencyRate+CoreDataClass.swift */,
+				2E2834002179ED0400E3B5C4 /* CurrencyRate+CoreDataProperties.swift */,
+				2E537D462179E56300F3AE5B /* CoreDataStack.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E537D052179B49600F3AE5B /* ViewController.swift in Sources */,
+				2E537D412179E3D000F3AE5B /* ConversionDataModel.xcdatamodeld in Sources */,
+				2E2834022179ED0400E3B5C4 /* CurrencyRate+CoreDataProperties.swift in Sources */,
+				2E2834012179ED0400E3B5C4 /* CurrencyRate+CoreDataClass.swift in Sources */,
 				2E537D252179D62700F3AE5B /* ExchangeRatesAPI.swift in Sources */,
+				2E537D472179E56300F3AE5B /* CoreDataStack.swift in Sources */,
+				2E2834042179ED5100E3B5C4 /* ConversionCalculator.swift in Sources */,
 				2E537D232179D5CE00F3AE5B /* ExchangeRate.swift in Sources */,
 				2E537D032179B49600F3AE5B /* AppDelegate.swift in Sources */,
 			);
@@ -473,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E537D3F2179E3D000F3AE5B /* ConversionDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E537D402179E3D000F3AE5B /* ConversionDataModel.xcdatamodel */,
+			);
+			currentVersion = 2E537D402179E3D000F3AE5B /* ConversionDataModel.xcdatamodel */;
+			path = ConversionDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2E537CF72179B49600F3AE5B /* Project object */;
 }

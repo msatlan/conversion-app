@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,106 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConversionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Currency" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-r1-WHn">
+                                <rect key="frame" x="108.5" y="320" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bqu-y7-kKZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="tkU-qc-iQI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YHa-4r-dz7"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount to convert" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nF-tO-eID">
+                                <rect key="frame" x="108.5" y="162" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BTF-SR-nC5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="sro-UT-tAz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Chr-VT-bqp"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From  Currency" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-F3-VL2">
+                                <rect key="frame" x="108.5" y="218" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BoN-HZ-YBe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="Cw6-rf-v5B"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cmm-bu-oQt"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-UW-w4i">
+                                <rect key="frame" x="137" y="271" width="46" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="BZh-dv-7cU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Mxa-Qa-oCI"/>
+                                    <constraint firstAttribute="height" constant="26" id="RB0-ly-BdG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="hAs-Gk-qJu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Convert!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUB-ix-XWt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Result" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="reE-ga-tiz">
+                                <rect key="frame" x="108.5" y="374" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Hh-K8-7N2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="Vez-QO-J6g"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LYE-Ak-U36"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6cE-UW-w4i" firstAttribute="top" secondItem="XUH-F3-VL2" secondAttribute="bottom" constant="23" id="8Pz-Pk-wqn"/>
+                            <constraint firstItem="GXA-r1-WHn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ogb-a1-U4q"/>
+                            <constraint firstItem="reE-ga-tiz" firstAttribute="top" secondItem="GXA-r1-WHn" secondAttribute="bottom" constant="24" id="Q6P-IN-gXK"/>
+                            <constraint firstItem="reE-ga-tiz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VdE-Z4-SV3"/>
+                            <constraint firstItem="1nF-tO-eID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bEu-Nh-K9U"/>
+                            <constraint firstItem="GXA-r1-WHn" firstAttribute="top" secondItem="6cE-UW-w4i" secondAttribute="bottom" constant="23" id="eaR-i0-DgW"/>
+                            <constraint firstItem="XUH-F3-VL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fsf-Em-v8q"/>
+                            <constraint firstItem="XUH-F3-VL2" firstAttribute="top" secondItem="1nF-tO-eID" secondAttribute="bottom" constant="26" id="o2d-ff-YPJ"/>
+                            <constraint firstItem="1nF-tO-eID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="oeU-ML-Aqy"/>
+                            <constraint firstItem="6cE-UW-w4i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yJd-mo-njN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="convertButton" destination="6cE-UW-w4i" id="mMT-tT-KSq"/>
+                        <outlet property="fromCurrencyTextField" destination="XUH-F3-VL2" id="I5C-Je-0st"/>
+                        <outlet property="moneyAmountTextField" destination="1nF-tO-eID" id="6wt-JN-clH"/>
+                        <outlet property="resultTextField" destination="reE-ga-tiz" id="vzH-EA-4HS"/>
+                        <outlet property="toCurrencyTextField" destination="GXA-r1-WHn" id="Ozi-jK-Lg3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="35.625" y="24.295774647887324"/>
         </scene>
     </scenes>
 </document>
