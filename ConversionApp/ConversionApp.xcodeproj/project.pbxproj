@@ -13,6 +13,8 @@
 		2E537D0A2179B49B00F3AE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E537D092179B49B00F3AE5B /* Assets.xcassets */; };
 		2E537D0D2179B49B00F3AE5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E537D0B2179B49B00F3AE5B /* LaunchScreen.storyboard */; };
 		2E537D182179B49B00F3AE5B /* ConversionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D172179B49B00F3AE5B /* ConversionAppTests.swift */; };
+		2E537D232179D5CE00F3AE5B /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */; };
+		2E537D252179D62700F3AE5B /* ExchangeRatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		2E537D132179B49B00F3AE5B /* ConversionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConversionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E537D172179B49B00F3AE5B /* ConversionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionAppTests.swift; sourceTree = "<group>"; };
 		2E537D192179B49B00F3AE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				2E537D022179B49600F3AE5B /* AppDelegate.swift */,
+				2E537D222179D5CE00F3AE5B /* ExchangeRate.swift */,
+				2E537D242179D62700F3AE5B /* ExchangeRatesAPI.swift */,
 				2E537D042179B49600F3AE5B /* ViewController.swift */,
 				2E537D062179B49600F3AE5B /* Main.storyboard */,
 				2E537D092179B49B00F3AE5B /* Assets.xcassets */,
@@ -198,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E537D052179B49600F3AE5B /* ViewController.swift in Sources */,
+				2E537D252179D62700F3AE5B /* ExchangeRatesAPI.swift in Sources */,
+				2E537D232179D5CE00F3AE5B /* ExchangeRate.swift in Sources */,
 				2E537D032179B49600F3AE5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
